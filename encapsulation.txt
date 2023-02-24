@@ -1,0 +1,100 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi=
+"http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=
+"http://java.sun.com/xml/ns/persistence
+    http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
+    <!-- Don't change this value -->
+    <persistence-unit name="GenericDBAdapter">
+        <properties>
+            <!--  Don't change this value  -->
+            <property name="hibernate.archive.autodetection" value="class, 
+		hbm" />
+            <!--The driver class name"/-->
+            <property name="hibernate.connection.driver_class" value="com.
+              mercury.jdbc.MercOracleDriver" />
+            <!--The connection url"/-->
+            <property name="hibernate.connection.url" value="jdbc:mercury:
+              oracle://artist:1521;sid=cmdb2" />
+            <!--DB login credentials"/-->
+            <property name="hibernate.connection.username" value="CMDB" />
+            <property name="hibernate.connection.password" value="CMDB" />
+            <!--connection pool properties"/-->
+            <property name="hibernate.c3p0.min_size" value="5" />
+            <property name="hibernate.c3p0.max_size" value="20" />
+            <property name="hibernate.c3p0.timeout" value="300" />
+            <property name="hibernate.c3p0.max_statements" value="50" />
+            <property name="hibernate.c3p0.idle_test_period" value="3000" />
+            <!--The dialect to use-->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.
+		OracleDialect" />
+        </properties>
+    </persistence-unit>
+</persistence>
+
+
+
+What is difference between encapsulation and abstraction?
+Abstraction is a design level process and it is used to reduce the complexity at the designing stage of a project. Encapsulation is an implementation level process, and it is used to provide privacy and maintain control over the transparency of data at the implementation stage of a project
+
+
+What is the best example of encapsulation?
+Consider the below real time example: Encapsulation: As a driver you know how to start the car by pressing the start button and internal details of the starting operations are hidden from you. So the entire starting process is hidden from you otherwise we can tell starting operation is encapsulated from you.
+
+
+
+
+
+
+
+
+
+//Account class - private data members bundled with getters and setters
+class Account {  
+    //private data members  
+    private long acc_no;  
+    private String name,email;  
+    private float amount;  
+    
+  //public getter and setter methods for each data member 
+    public long getAcc_no() {  
+        return acc_no;  
+    }  
+    public void setAcc_no(long acc_no) {  
+        this.acc_no = acc_no;  
+    }  
+    public String getName() {  
+        return name;  
+    }  
+    public void setName(String name) {  
+        this.name = name;  
+    }  
+    public String getEmail() {  
+        return email;  
+    }  
+    public void setEmail(String email) {  
+        this.email = email;  
+    }  
+    public float getAmount() {  
+        return amount;  
+    }   
+    public void setAmount(float amount) {  
+        this.amount = amount;  
+    }  
+   
+}  public class Main {  
+    public static void main(String[] args) {  
+        //create instance of Account class  
+        Account myAcc=new Account();  
+        //set values for data members through setter methods  
+        myAcc.setAcc_no(775492842L);  
+        myAcc.setName("SoftwareTestingHelp.com");  
+        myAcc.setEmail("sth_account@sth.com");  
+        myAcc.setAmount(25000f);  
+        //read data member values through getter methods  
+        System.out.println("Account No:" + myAcc.getAcc_no()+" "+"Account Name:"
+                + myAcc.getName()+" \n"+"Account holder email:" + myAcc.getEmail()+"\n "
+                + "Amount in Account:" + myAcc.getAmount());  
+    }  
+}
+Output:
+
+getter and setter methods - output
