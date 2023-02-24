@@ -84,3 +84,8 @@ classList property – manipulate CSS classes of an
 element.
 Element’s width &amp; height – get the width and
 height of an element.
+
+
+
+
+i will end the concepts
